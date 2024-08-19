@@ -71,6 +71,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'blog.wsgi.application'
 
+AUTH_USER_MODEL = "posts.CustomUser"
+
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
