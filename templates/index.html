@@ -66,7 +66,7 @@
                         </a>
                         <p class="post-meta">
                             Posted by
-                            <a href="#!">{{ post.author }}</a>
+                            <a href="{% url 'profile' post.author.id %}">{{ post.author }}</a>
                             on {{ post.date }}
                         </p>
                     </div>
@@ -97,14 +97,6 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <ul class="list-inline text-center">
-                            {% comment %} <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li> {% endcomment %}
                             <li class="list-inline-item">
                                 <a href="https://www.facebook.com/abubakerKhaled11" target="_blank|_self|_parent|_top|framename">
                                     <span class="fa-stack fa-lg">

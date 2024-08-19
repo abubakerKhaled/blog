@@ -31,3 +31,7 @@ def post_detail(request, post_id):
 
 def contact(request):
     return render(request, "contact.html", {"title": "Contact Page"})
+
+def profile(request, user_id):
+    user = CustomUser.objects.get(id=user_id)
+    return render(request, "profile.html", {"title": user.username, 'user': user})
