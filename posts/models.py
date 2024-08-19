@@ -28,6 +28,7 @@ class Image(models.Model):
 # Define the post model
 class Post(models.Model):
     title = models.CharField(max_length=200)
+    sub_heading = models.CharField(max_length=250, blank=True, null=True)
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     body = models.TextField()
     date = models.DateTimeField(default=timezone.now)
