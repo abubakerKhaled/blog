@@ -21,9 +21,8 @@ def index(request):
     )
 
 def about(request):
-    # Example: Fetch a list of users to display on the about page
     users = CustomUser.objects.all()
-    return render(request, "about.html", {"title": "About Page", "users": users})
+    return render(request, "about.html", {"title": "About Page"})
 
 def post_detail(request, post_id):
     # Fetch a specific post by its ID
@@ -31,6 +30,4 @@ def post_detail(request, post_id):
     return render(request, "post.html", {"title": post.title, "post": post})
 
 def contact(request):
-    # Typically, contact pages don't need to interact with models
-    # However, you can include additional data if needed
     return render(request, "contact.html", {"title": "Contact Page"})
